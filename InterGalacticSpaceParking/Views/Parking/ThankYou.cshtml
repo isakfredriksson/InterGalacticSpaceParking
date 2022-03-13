@@ -1,0 +1,14 @@
+﻿@model InterGalacticSpaceParking.Models.Reservation
+@{
+	ViewData["Title"] = "ThankYou";
+}
+
+<h1>Thank you for your registration!</h1>
+
+<h2>Your car is now parked in </h2>
+<h1>Floor: @Model.FloorId Parking Lot: @Model.ParkingId</h1>
+<h2>Date: @Model.Date</h2>
+<h2>Registration Code for deregistration: @Model.RegistrationCode</h2>
+
+
+

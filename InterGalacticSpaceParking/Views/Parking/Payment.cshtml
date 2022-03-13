@@ -1,0 +1,10 @@
+﻿@model InterGalacticSpaceParking.Models.Reservation
+@{
+	ViewData["Title"] = "Payment";
+}
+
+<h1>Unregistration complete.</h1>
+
+<h2>Total parking cost: @TempData["Sum"] kr</h2>
+<h1>Floor: @Model.FloorId Parking Lot: @Model.ParkingId</h1>
+<h1>@Model.Date - @TempData["RemoveDate"]</h1>

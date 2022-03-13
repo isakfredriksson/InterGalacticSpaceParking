@@ -1,0 +1,30 @@
+﻿@model InterGalacticSpaceParking.Models.Reservation
+
+@{
+	ViewData["Title"] = "RemoveReservation";
+}
+
+<h1>Deregister parking</h1>
+<p>@ViewBag.ErrorMessage</p>
+<h3>Please enter your registration code</h3>
+<hr />
+<p>Your registration code must be 10-digits.</p>
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="RemoveReservation" method="post" asp-antiforgery="true">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="RegistrationCode" class="control-label"></label>
+				<input asp-for="RegistrationCode" class="form-control" />
+				<span asp-validation-for="RegistrationCode" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Confirm" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts {
+	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
